@@ -4,6 +4,7 @@
     <div class="mainVisual">
       <img src="~assets/img/steg-circle-icon.png" alt="circle icon">
     </div>
+    <recommended-article />
   </div>
 </template>
 
