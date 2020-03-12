@@ -1,5 +1,10 @@
 <template>
+<div class="index">
   <stegBlogHeader />
+    <div class="mainVisual">
+      <img src="~assets/img/steg-circle-icon.png" alt="circle icon">
+    </div>
+  </div>
 </template>
 
 <script>
@@ -19,3 +24,19 @@ export default {
   }
 }
 </script>
+
+<style>
+.mainVisual{
+  background-image: url('~assets/img/1.jpg');
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.mainVisual img{
+}
+</style>
