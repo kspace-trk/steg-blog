@@ -27,7 +27,7 @@ export default {
 
 <style>
 .mainVisual{
-  background-image: url('~assets/img/1.jpg');
+  background-image: url('~assets/img/main-visual.jpg');
   height: 400px;
   background-size: cover;
   background-position: center;
