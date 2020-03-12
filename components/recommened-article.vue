@@ -1,6 +1,6 @@
 <template>
     <div class="recommended-article">
-        
+        <p>オヌヌメ</p>
     </div>
 </template>
 <script>
