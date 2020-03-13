@@ -1,6 +1,6 @@
 <template>
     <div class="articleListFlex">
-        <div class="">
+        <div class="articleContents">
         </div>
     </div>
 </template>
@@ -14,7 +14,7 @@
     flex-wrap: wrap;
 }
 
-.works_contents{
+.articleContents{
     width: 240px;
     height: 285px;
     background-color: #f4f4f4;
