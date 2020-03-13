@@ -7,7 +7,7 @@
                 <div class="articleCategory">
                     <p>PHP</p>
                 </div>
-                <p>{{info}}</p>
+                <p>{{info.data.contents[0]["articleTitle"]}}</p>
             </div>
         </div>
     </div>
@@ -23,7 +23,7 @@ export default {
     
     data(){
         return{
-            info:null
+            info:null,
         }
     },
     mounted() {
@@ -32,10 +32,12 @@ export default {
     })
     .then(response => {
         console.log('できたあああああああ')
-        (this.info = response.articleList)
+        this.info = response
+        console.log(this.info.data)
+        console.log(this.info.data.contents[0]["articleTitle"])
     })
     .catch(error => {
-        console.log('できないいいいいいいい')
+        console.log('error')
     })
   }
 }
