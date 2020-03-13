@@ -48,5 +48,11 @@ export default {
     */
     extend (config, ctx) {
     }
+  },
+  modules: [
+    '@nuxtjs/axios',
+  ],
+  axios: {
   }
+
 }

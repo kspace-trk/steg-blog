@@ -10,10 +10,11 @@
 </template>
 
 <script>
-
+import Vue from 'vue'
 import stegBlogHeader from '@/components/stegBlogHeader.vue'
 import RecommendArticle from '@/components/recommend-article.vue'
 import articleList from '@/components/articleList.vue'
+
 export default {
   data() {
     return {
