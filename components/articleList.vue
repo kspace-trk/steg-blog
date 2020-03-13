@@ -3,3 +3,7 @@
         <p>あ</p>
     </div>
 </template>
+
+<style>
+
+</style>
