@@ -34,7 +34,7 @@ export default {
   height: 400px;
   background-size: cover;
   background-position: center;
-  width: 100vw;
+  width: 100%;
   justify-content: center;
   display: flex;
   align-items: center;
