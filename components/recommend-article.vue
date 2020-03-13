@@ -5,7 +5,7 @@
         </div>
         <div class="recommend-box">
             <div class="recommend-img">
-
+                <img src="~assets/img/article-img.png" alt="article-icon">
             </div>
             <div class="article">
                 <div class="articleTitle">
@@ -55,9 +55,11 @@ export default {
 }
 
 .recommend-img{
-    background-color: #707070;
     width: 70%;
-    height: 300px;
+}
+
+.recommend-img img{
+    width: 70%;
 }
 
 .article{
@@ -67,19 +69,27 @@ export default {
 }
 .articleTitle{
     font-size: 1.3rem;
+    margin-top: 10px;
 }
 
 .articleInfo{
     display: flex;
+    margin-top: 15px;
 }
 
 .articleCategory{
     background-color: #20D8BA;
+    border-radius: 5px;
 }
 
 .articleCategory p{
     color: #FFFFFF;
     font-size: 1.0rem;
+    margin: 0 20px;
+}
+
+.articleDate{
+    margin-left: 20px;
 }
 
 .articleDate p{
@@ -88,5 +98,6 @@ export default {
 
 .articleText{
     font-size: 0.8rem;
+    margin-top: 30px;
 }
 </style>
