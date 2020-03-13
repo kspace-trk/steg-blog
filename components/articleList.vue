@@ -1,5 +1,5 @@
 <template>
-    <div >
-        
+    <div id="index">
+        <p>あ</p>
     </div>
 </template>
