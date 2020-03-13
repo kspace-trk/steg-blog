@@ -8,7 +8,20 @@
 
             </div>
             <div class="article">
-                <p>記事を書きましょう</p>
+                <div class="articleTitle">
+                    <p>PHPでHello World出力してみた</p>
+                </div>
+                <div class="articleInfo">
+                    <div class="articleCategory">
+                        <p>PHP</p>
+                    </div>
+                    <div class="articleDate">
+                        <p>3/10 19:40</p>
+                    </div>
+                </div>
+                <div class="articleText">
+                        <p>こんにちは、僕です。今回はMacbook Pro 2015 を使って焼肉を焼いた際に起きた出来事について色々を書いていきたいと思います。場所は相模原の河原です。気温は18度と4月にしては暖かい気温でした。</p>
+                </div>
             </div>
         </div>
     </div>
@@ -48,7 +61,32 @@ export default {
 }
 
 .article{
-    text-align: center;
+    margin-left: 30px;
+    text-align: left;
     width: 30%;
+}
+.articleTitle{
+    font-size: 1.3rem;
+}
+
+.articleInfo{
+    display: flex;
+}
+
+.articleCategory{
+    background-color: #20D8BA;
+}
+
+.articleCategory p{
+    color: #FFFFFF;
+    font-size: 1.0rem;
+}
+
+.articleDate p{
+    font-size: 0.8rem;
+}
+
+.articleText{
+    font-size: 0.8rem;
 }
 </style>
