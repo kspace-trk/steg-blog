@@ -32,6 +32,9 @@ export default {
 </script>
 
 <style>
+.index{
+  background-color: #f7f7f7;
+}
 .mainVisual{
   background-image: url('~assets/img/main-visual.jpg');
   height: 400px;
@@ -45,4 +48,5 @@ export default {
 
 .mainVisual img{
 }
+
 </style>
