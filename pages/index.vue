@@ -4,13 +4,16 @@
     <div class="mainVisual">
       <img src="~assets/img/steg-circle-icon.png" alt="circle icon">
     </div>
-    <recommended-article />
+    <recommend-article />
+    <articleList />
   </div>
 </template>
 
 <script>
 
 import stegBlogHeader from '@/components/stegBlogHeader.vue'
+import RecommendArticle from '@/components/recommend-article.vue'
+import articleList from '@/components/articleList.vue'
 export default {
   data() {
     return {
@@ -18,6 +21,8 @@ export default {
   },
   components: {
     stegBlogHeader,
+    RecommendArticle,
+    articleList
   },
   methods: {
   },
@@ -32,7 +37,7 @@ export default {
   height: 400px;
   background-size: cover;
   background-position: center;
-  width: 100vw;
+  width: 100%;
   justify-content: center;
   display: flex;
   align-items: center;
