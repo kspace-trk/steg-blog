@@ -5,17 +5,19 @@
     </div>
     <div class="recommend-box">
       <div class="recommend-img">
-        
+        <img :src="img.url" alt="" height="100%" width="100%">
       </div>
-      <div class="article">
+      <div class="articleMain">
         <div class="articleTitle">
-          {{ info.data.contents[0]["articleTitle"] }}
+          <p>{{ title }}</p>
         </div>
         <div class="articleInfo">
           <div class="articleCategory">
-            <p>{{ info.data.contents[0]["articleCategory"] }}</p>
+            <p>{{ category }}</p>
           </div>
-          <div class="articleDate"></div>
+          <div class="articleDate">
+            <p>{{ at }}</p>
+          </div>
         </div>
         <div class="articleText">
           <p>こんにちは、僕です。今回はMacbook Pro 2015 を使って焼肉を焼いた際に起きた出来事について色々を書いていきたいと思います。場所は相模原の河原です。気温は18度と4月にしては暖かい気温でした。</p>
@@ -29,10 +31,12 @@ import axios from "axios";
 import Vue from "vue";
 
 export default {
-  el: '#app',
+  name: 'app',
   data() {
     return {
-      info: null
+      title: null,
+      category: null,
+      at: null
     };
   },
   mounted() {
@@ -41,9 +45,10 @@ export default {
         headers: { "X-API-KEY": '86df9a31-91d6-4f0a-a022-1bd1ee558330' }
       })
       .then(response => {
-          this.info = response
-          console.log(this.info.data)
-          console.log(this.info.data.contents[0]["articleTitle"])
+          this.title = response.data.contents[0]["articleTitle"]
+          this.category = response.data.contents[0]["articleCategory"]
+          this.at = response.data.contents[0]["createdAt"]
+          this.img = response.data.contents[0]["articleImg"]
       });
   }
 }
@@ -72,11 +77,12 @@ export default {
 }
 
 .recommend-img {
-  width: 70%;
+  width: 60%;
   background-color: #404040;
+  border-radius: 15px;
 }
 
-.article {
+.articleMain {
   margin-left: 30px;
   text-align: left;
   width: 30%;
