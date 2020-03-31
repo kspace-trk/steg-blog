@@ -5,30 +5,39 @@
       <img src="~assets/img/steg-circle-icon.png" alt="circle icon">
     </div>
     <recommend-article />
-    <articleList />
+    <div v-for="elem in item" :key="elem" class="article-list">
+    <articleList :article="elem"/>
+    </div>
   </div>
 </template>
 
 <script>
-import Vue from 'vue'
-import stegBlogHeader from '@/components/stegBlogHeader.vue'
-import RecommendArticle from '@/components/recommend-article.vue'
-import articleList from '@/components/articleList.vue'
+import axios from 'axios';
+import stegBlogHeader from '@/components/stegBlogHeader.vue';
+import RecommendArticle from '@/components/recommend-article.vue';
+import articleList from '@/components/articleList.vue';
 
 export default {
   data() {
     return {
+      item: [],
     }
   },
+  async asyncData() {
+    const { data } = await axios.get("https://steg-blog.microcms.io/api/v1/article1",{
+      headers:{"X-API-KEY": "86df9a31-91d6-4f0a-a022-1bd1ee558330" }
+    });
+    return {
+      item: data.contents
+    }
+  },
+
   components: {
     stegBlogHeader,
     RecommendArticle,
     articleList
   },
-  methods: {
-  },
-  mounted() {
-  }
+
 }
 </script>
 
@@ -45,9 +54,6 @@ export default {
   justify-content: center;
   display: flex;
   align-items: center;
-}
-
-.mainVisual img{
 }
 
 </style>
