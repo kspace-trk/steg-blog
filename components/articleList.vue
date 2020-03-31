@@ -19,12 +19,6 @@ import axios from "axios";
 
 export default {
   props:["article"],
-  mounted(){
-  console.log(this.article.articleImg.url);
-  }
-
-
-  
 };
 
 </script>
