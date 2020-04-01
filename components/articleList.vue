@@ -1,48 +1,34 @@
 <template>
-  <div id="app">
-    <div class="articleListFlex">
-      <div class="articleContents">
-        <img :src="article.articleImg.url" alt="記事画像" />
-        <div class="articleCategory">
-          <p>{{article.articleCategory}}</p>
-        </div>
-        <div class="articleContentsTitle">
-          <p>{{article.articleTitle}}</p>
-        </div>
+    <div class="articleContents">
+      <img :src="article.articleImg.url" alt="記事画像" />
+      <div class="articleCategory">
+        <p>{{article.articleCategory}}</p>
+      </div>
+      <div class="articleContentsTitle">
+        <p>{{article.articleTitle}}</p>
       </div>
     </div>
-  </div>
 </template>
 
 <script>
 import axios from "axios";
 
 export default {
-  props:["article"],
+  props: ["article"]
 };
-
 </script>
 
 <style>
-.articleListFlex {
-  margin: 60px 15em 100px 15em;
-  padding-bottom: 60px;
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-}
-
 .articleContents {
-  width: 270px;
+  width: 300px;
   height: 210px;
   background-color: #ffffff;
-  margin: 0 0.2em 20px 0.2em;
-  display: block;
-  justify-content: center;
   border-radius: 8px;
+  display: block;
 }
 .articleContents img {
-  width: 270px;
+  position: relative;
+  width: 100%;
   height: 140px;
 }
 .articleContentsTitle {
