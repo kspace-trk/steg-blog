@@ -12,7 +12,7 @@
 
 <style>
 .headerWrapper{
-    height: 75px;
+    height: 65px;
     width: 100%;
     background-color: #404040;
     z-index: 100;
@@ -31,7 +31,7 @@
 }
 
 .headerSubIcon img{
-  height: 35px;
+  height: 30px;
   margin: auto 25px auto ;
   }
 </style>
