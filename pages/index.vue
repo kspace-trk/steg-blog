@@ -7,7 +7,7 @@
     <recommend-article :article="item[0]" />
     <b-container>
       <b-row class="article-list">
-        <b-col lg="4" md="6" sm="7" v-for="elem in item" :key="elem" class="article-list">
+        <b-col lg="4" md="6" sm="8"  v-for="elem in item" :key="elem" class="article-list">
           <articleList :article="elem" />
         </b-col>
       </b-row>

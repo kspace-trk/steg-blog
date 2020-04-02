@@ -21,10 +21,10 @@ export default {
 <style>
 .articleContents {
   width: 300px;
-  height: 210px;
+  margin: 0 auto;
   background-color: #ffffff;
   border-radius: 8px;
-  display: block;
+ 
   margin-bottom: 50px;
 }
 .articleContents img {
