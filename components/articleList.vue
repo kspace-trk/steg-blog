@@ -25,6 +25,7 @@ export default {
   background-color: #ffffff;
   border-radius: 8px;
   display: block;
+  margin-bottom: 50px;
 }
 .articleContents img {
   position: relative;
