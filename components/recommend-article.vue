@@ -1,7 +1,7 @@
 <template>
     <div class="recommend">
         <div class="recommend-text-box">
-            <p class="recommend-text">人気記事</p>
+            <p class="recommend-text">おすすめ記事</p>
         </div>
         <div class="recommend-box">
             <div class="recommend-img">
