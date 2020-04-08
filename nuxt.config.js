@@ -1,6 +1,6 @@
 
 export default {
-  mode: 'universal',
+  mode: 'spa',
   /*
   ** Headers of the page
   */
@@ -48,5 +48,12 @@ export default {
     */
     extend (config, ctx) {
     }
+  },
+  modules: [
+    '@nuxtjs/axios',
+    'bootstrap-vue/nuxt',
+  ],
+  axios: {
   }
+
 }
