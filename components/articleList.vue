@@ -1,5 +1,5 @@
 <template>
-    <div class="articleContents" >
+    <div class="articleContents">
       <nuxt-link :to="'/articles/' + article.id">
       <img :src="article.image.url" alt="記事画像"  />
       <div class="articleCategory">
@@ -13,7 +13,6 @@
 </template>
 
 <script>
-import axios from "axios";
 
 export default {
   props: ["article"]

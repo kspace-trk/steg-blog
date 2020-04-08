@@ -1,11 +1,14 @@
 <template>
-    <div>
-        <p>{{item.title}}</p>
+    <div class="contents">
+      <stegBlogHeader />
+      <contents :contents="item"/>
     </div>
 </template>
 
 <script>
 import axios from "axios";
+import stegBlogHeader from "@/components/stegBlogHeader.vue";
+import contents from "@/components/contents.vue";
 export default {
     data() {
     return {
@@ -25,11 +28,15 @@ export default {
   },
   mounted(){
       console.log(this.item);
+  },
+    components: {
+    stegBlogHeader,
+    contents,
   }
 }
 </script>
 
 <style>
-    
+
 </style>
 
