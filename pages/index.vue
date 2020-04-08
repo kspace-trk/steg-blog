@@ -34,6 +34,7 @@ export default {
         headers: { "X-API-KEY": "86df9a31-91d6-4f0a-a022-1bd1ee558330" }
       }
     );
+    
     return {
       item: data.contents
     };
