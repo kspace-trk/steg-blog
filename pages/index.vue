@@ -7,7 +7,7 @@
     <recommend-article :article="item[0]" />
     <b-container>
       <b-row class="article-list">
-        <b-col lg="4" md="6" sm="7" v-for="elem in item" :key="elem" class="article-list">
+        <b-col lg="4" md="6" sm="8" v-for="elem in item" :key="elem.id" class="article-list">
           <articleList :article="elem" />
         </b-col>
       </b-row>
@@ -29,7 +29,7 @@ export default {
   },
   async asyncData() {
     const { data } = await axios.get(
-      "https://steg-blog.microcms.io/api/v1/article1",
+      "https://steg-blog.microcms.io/api/v1/article",
       {
         headers: { "X-API-KEY": "86df9a31-91d6-4f0a-a022-1bd1ee558330" }
       }

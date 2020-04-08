@@ -1,12 +1,14 @@
 <template>
-    <div class="articleContents">
-      <img :src="article.articleImg.url" alt="記事画像" />
+    <div class="articleContents" >
+      <nuxt-link :to="'/articles/' + article.id">
+      <img :src="article.image.url" alt="記事画像"  />
       <div class="articleCategory">
-        <p>{{article.articleCategory}}</p>
+        <p>{{article.category}}</p>
       </div>
       <div class="articleContentsTitle">
-        <p>{{article.articleTitle}}</p>
+        <p>{{article.title}}</p>
       </div>
+      </nuxt-link>
     </div>
 </template>
 
@@ -21,10 +23,11 @@ export default {
 <style>
 .articleContents {
   width: 300px;
-  height: 210px;
+  margin: 0 auto;
   background-color: #ffffff;
   border-radius: 8px;
-  display: block;
+ 
+  margin-bottom: 50px;
 }
 .articleContents img {
   position: relative;
