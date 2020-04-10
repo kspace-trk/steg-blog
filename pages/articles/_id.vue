@@ -26,9 +26,6 @@ export default {
       item: data,
     };
   },
-  mounted(){
-      console.log(this.item);
-  },
     components: {
     stegBlogHeader,
     contents,

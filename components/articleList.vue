@@ -25,8 +25,8 @@ export default {
   margin: 0 auto;
   background-color: #ffffff;
   border-radius: 8px;
- 
   margin-bottom: 50px;
+  text-decoration: none;
 }
 .articleContents img {
   position: relative;
@@ -38,6 +38,10 @@ export default {
   margin-bottom: 0;
   padding-left: 12px;
   padding-top: 10px;
+}
+.articleContentsTitle p{
+  text-decoration: none;
+  color: #282828;
 }
 .articleCategory {
   height: 16px;

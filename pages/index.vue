@@ -4,7 +4,9 @@
     <div class="mainVisual">
       <img src="~assets/img/steg-circle-icon.png" alt="circle icon" />
     </div>
-    <recommend-article :recommend="item[2]" />
+    <div v-for="elem in item" :key="elem.id">
+    <recommend-article :recommend="elem" />
+    </div>
     <b-container>
       <b-row class="article-list">
         <b-col lg="4" md="6" sm="8" v-for="elem in item" :key="elem.id" class="article-list">

@@ -32,17 +32,17 @@ export default {
     width: 100%;
     margin-bottom: 30px;
 }
-h1{
+.contents-text h1{
     font-size: 2rem;
     border-bottom: solid 1px #707070;
     margin-bottom: 1.5rem;
 }
-h2{
+.contents-text h2{
     font-size: 1.5rem;
     border-bottom: solid 1px #707070;
     margin-bottom: 1.5rem;
 }
-h3 {
+.contents-text h3 {
     font-size: 1.25rem;
 }
 </style>

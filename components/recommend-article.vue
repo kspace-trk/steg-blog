@@ -1,5 +1,5 @@
 <template>
-  <div class="recommend container">
+  <div v-if="recommend.recommend" class="recommend container">
     <div class="recommend-text-box row">
       <p class="recommend-text col-xs-12">おすすめ記事</p>
     </div>
@@ -24,7 +24,7 @@
             <p>{{recommend.createdAt}}</p>
           </div>
         </div>
-        <div class="articleText">
+        <div class="articleText"  v-html="$md.render(recommend.contents)">
           <p>{{recommend.contents}}</p>
         </div>
       </div>
@@ -33,7 +33,10 @@
 </template>
 <script>
 export default {
-  props: ["recommend"]
+  props: ["recommend"],
+  mounted(){
+    console.log(this.recommend.contents)
+  },
 };
 </script>
 <style>
@@ -53,8 +56,7 @@ export default {
   display: flex;
   margin: 0 0 60px 0;
 }
-.recommend-img {
-}
+
 .article {
   text-align: left;
 }
@@ -77,6 +79,20 @@ export default {
   font-size: 0.8rem;
 }
 .articleText {
+  max-width: 400px;
+  max-height: 160px;
+  font-size: 0.8rem;
+  overflow: hidden;
+  color: #505050;
+}
+
+.articleText h1 {
+  font-size: 0.8rem;
+}
+.articleText h2 {
+  font-size: 0.8rem;
+}
+.articleText h3 {
   font-size: 0.8rem;
 }
 </style>
