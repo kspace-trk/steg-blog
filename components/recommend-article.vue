@@ -1,7 +1,7 @@
 <template>
   <div v-if="recommend.recommend" class="recommend container">
     <div class="recommend-text-box row">
-      <p class="recommend-text col-xs-12">おすすめ記事</p>
+      <p class="recommend-text col-xs-12">人気記事</p>
     </div>
     <div class="recommend-box row">
       <div class="recommend-img col-md-6 col-xs-10">
@@ -47,6 +47,7 @@ export default {
   margin: auto;
   font-size: 1.5rem;
   color: #404040;
+  font-weight: 700;
   border-bottom: solid 2px #707070;
 }
 .recommend-text-box {
