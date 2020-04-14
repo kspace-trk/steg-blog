@@ -67,7 +67,5 @@ export default {
   display: flex;
   align-items: center;
 }
-.article-list {
-  margin: 0 auto;
-}
+
 </style>

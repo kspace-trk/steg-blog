@@ -1,11 +1,11 @@
 <template>
   <div class="contents">
     <stegBlogHeader />
-    <div class="container">
+    <b-container>
       <div class="articleContents">
         <contents :contents="item" />
       </div>
-    </div>
+    </b-container>
   </div>
 </template>
 
@@ -39,21 +39,17 @@ export default {
 
 <style>
 .contents {
-  height: 920px;
-
-  background-image: url("~@/assets/img/article-background.png");
-
+  background-image: url("~@/assets/img/article-background.jpg");
   background-size: cover;
+  background-attachment: fixed;
 }
-
 .articleContents {
-  border-radius: 2%;
-
-  margin: 0 auto;
-
-  width: 80%;
-
-  background-color: #ffff;
+  border-radius: 20px;
+  margin: 50px auto;
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  padding-top: 30px;
 }
 </style>
 
