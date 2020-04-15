@@ -55,6 +55,7 @@ export default {
     '@nuxtjs/axios',
     'bootstrap-vue/nuxt',
     '@nuxtjs/markdownit',
+    ['@nuxtjs/moment', ['ja']]
   ],
   axios: {
   },

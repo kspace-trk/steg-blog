@@ -46,7 +46,7 @@ export default {
 .articleContents {
   border-radius: 20px;
   margin: 50px auto;
-  width: 100%;
+  width: 90%;
   height: auto;
   background-color: #ffffff;
   padding-top: 30px;
