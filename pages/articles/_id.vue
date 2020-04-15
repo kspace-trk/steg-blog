@@ -1,13 +1,20 @@
 <template>
-    <div>
-        <p>{{item.title}}</p>
-    </div>
+  <div class="contents">
+    <stegBlogHeader />
+    <b-container>
+      <div class="articleContents">
+        <contents :contents="item" />
+      </div>
+    </b-container>
+  </div>
 </template>
 
 <script>
 import axios from "axios";
+import stegBlogHeader from "@/components/stegBlogHeader.vue";
+import contents from "@/components/contents.vue";
 export default {
-    data() {
+  data() {
     return {
       item: []
     };
@@ -20,16 +27,29 @@ export default {
       }
     );
     return {
-      item: data,
+      item: data
     };
   },
-  mounted(){
-      console.log(this.item);
+  components: {
+    stegBlogHeader,
+    contents
   }
-}
+};
 </script>
 
 <style>
-    
+.contents {
+  background-image: url("~@/assets/img/article-background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+.articleContents {
+  border-radius: 20px;
+  margin: 50px auto;
+  width: 90%;
+  height: auto;
+  background-color: #ffffff;
+  padding-top: 30px;
+}
 </style>
 

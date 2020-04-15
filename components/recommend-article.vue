@@ -1,92 +1,140 @@
 <template>
-    <div class="recommend">
-        <div class="recommend-text-box">
-            <p class="recommend-text">おすすめ記事</p>
-        </div>
-        <div class="recommend-box">
-            <div class="recommend-img">
-
-            </div>
-            <div class="article">
-                <div class="articleTitle">
-                    <p>PHPでHello World出力してみた</p>
-                </div>
-                <div class="articleInfo">
-                    <div class="articleCategory">
-                        <p>PHP</p>
-                    </div>
-                    <div class="articleDate">
-                        <p>3/10 19:40</p>
-                    </div>
-                </div>
-                <div class="articleText">
-                        <p>こんにちは、僕です。今回はMacbook Pro 2015 を使って焼肉を焼いた際に起きた出来事について色々を書いていきたいと思います。場所は相模原の河原です。気温は18度と4月にしては暖かい気温でした。</p>
-                </div>
-            </div>
-        </div>
+  <div v-if="recommend.recommend" class="recommend container">
+    <div class="recommend-text-box row">
+      <p class="recommend-text col-xs-12">人気記事</p>
     </div>
+    <div class="recommend-box row">
+      <div class="recommend-img col-md-6 col-xs-10">
+        <nuxt-link :to="'/articles/' + recommend.id">
+          <img :src="recommend.image.url" alt="記事画像" class="img-fluid" />
+        </nuxt-link>
+      </div>
+
+      <div class="recommend-article col-md-6 col-xs-10">
+        <div class="recommend-article-title">
+          <nuxt-link :to="'/articles/' + recommend.id" tag="p">
+            <p>{{recommend.title}}</p>
+          </nuxt-link>
+        </div>
+        <div class="recommend-article-info">
+          <div class="recommend-article-category">
+            <p>{{recommend.category}}</p>
+          </div>
+          <div class="recommend-article-date">
+            <p>{{recommend.createdAt | moment}}</p>
+          </div>
+        </div>
+        <div class="recommend-article-text"  v-html="$md.render(recommend.contents)">
+          <p>{{recommend.contents}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 <script>
-import axios from "axios";
+import moment from 'moment'
 export default {
-}
+  props: ["recommend"],
+ filters: {
+        moment: function (date) {
+            return moment(date).format('YYYY/MM/DD HH:mm');
+        }
+    }
+};
 </script>
 <style>
-.recommend{
-    text-align: center;
+.recommend {
+  text-align: center;
+  margin-bottom: 80px;
 }
-
-.recommend-text{
-    margin: auto;
-    font-size: 1.5rem;
-    width: 15%;
-    color:#404040;
-    border-bottom: solid 2px #707070;
+.recommend-text {
+  margin: 0 auto;
+  font-size: 1.5rem;
+  color: #404040;
+  font-weight: 700;
+  border-bottom: solid 2px #707070;
 }
-
-.recommend-text-box{
-    padding: 100px 0 70px 0;
+.recommend-text-box {
+  padding: 60px 0 50px 0;
 }
-
-.recommend-box{
-    display: flex;
-    margin: 0 120px 60px 120px;
-
+.recommend-box {
+  display: flex;
+  margin: 0 0 20px 0;
 }
-
 .recommend-img{
-    background-color: #707070;
-    width: 70%;
-    height: 300px;
+  filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.3));
+}
+@media screen and (max-width: 767px) {
+  .recommend-img {
+  margin-bottom: 18px;
+}
+}
+.recommend-article {
+  text-align: left;
+  line-height: 1.4;
+  max-width: 400px;
+  max-height: 230px;
+  overflow: hidden;
+}
+@media screen and (max-width: 991px) {
+  .recommend-article {
+  max-height: 160px;
+}
+}
+.recommend-article-title{
+  margin-bottom: 8px;
+}
+.recommend-article-title p{
+  font-size: 1.3rem;
+  color: #282828;
+  text-decoration: none;
+  cursor: pointer;
+}
+.recommend-article-info {
+  display: flex;
+  width: 250px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.recommend-article-category {
+  display: inline-block;
+  text-align: center;
+  line-height: 1.4;
 }
 
-.article{
-    margin-left: 30px;
-    text-align: left;
-    width: 30%;
+.recommend-article-category p {
+  font-size: 0.7rem;
+  color: #ffffff;
+  background-color: #20d8ba;
+  border-radius: 4px;
+  padding:0 10px;
 }
-.articleTitle{
-    font-size: 1.3rem;
+.recommend-article-date{
+  margin-left: 10px;
 }
-
-.articleInfo{
-    display: flex;
+.recommend-article-date p {
+  font-size: 0.7rem;
+  line-height: 1.3;
 }
-
-.articleCategory{
-    background-color: #20D8BA;
-}
-
-.articleCategory p{
-    color: #FFFFFF;
-    font-size: 1.0rem;
+.recommend-article-text {
+  font-size: 0.8rem;
+  color: #505050;
 }
 
-.articleDate p{
-    font-size: 0.8rem;
+.recommend-article-text h1 {
+  font-size: 0.8rem;
+  margin-bottom: 0.2rem;
+}
+.recommend-article-text h2 {
+  font-size: 0.8rem;
+  margin-bottom: 0.2rem;
+}
+.recommend-article-text h3 {
+  font-size: 0.8rem;
+  margin-bottom: 0.2rem;
+}
+.recommend-article-text p {
+  font-size: 0.8rem;
 }
 
-.articleText{
-    font-size: 0.8rem;
-}
 </style>
