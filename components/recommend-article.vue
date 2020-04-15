@@ -17,11 +17,11 @@
           </nuxt-link>
         </div>
         <div class="recommend-article-info">
-          <div class="article-category">
+          <div class="recommend-article-category">
             <p>{{recommend.category}}</p>
           </div>
           <div class="recommend-article-date">
-            <p>{{recommend.createdAt}}</p>
+            <p>{{recommend.createdAt | moment}}</p>
           </div>
         </div>
         <div class="recommend-article-text"  v-html="$md.render(recommend.contents)">
@@ -32,8 +32,14 @@
   </div>
 </template>
 <script>
+import moment from 'moment'
 export default {
   props: ["recommend"],
+ filters: {
+        moment: function (date) {
+            return moment(date).format('YYYY/MM/DD HH:mm');
+        }
+    }
 };
 </script>
 <style>
@@ -71,7 +77,19 @@ export default {
   display: flex;
   width: 250px;
 }
+.recommend-article-category {
+  display: inline-block;
+  text-align: center;
+  line-height: 1.4;
+}
 
+.recommend-article-category p {
+  font-size: 0.8rem;
+  color: #ffffff;
+  background-color: #20d8ba;
+  border-radius: 4px;
+  padding:0 10px;
+}
 .recommend-article-date p {
   font-size: 0.8rem;
   line-height: 1.3;

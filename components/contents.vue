@@ -8,7 +8,7 @@
       <p>{{contents.category}}</p>
     </div>
     <div class="article-date">
-      <p>{{contents.createdAt}}</p>
+      <p>{{contents.createdAt | moment}}</p>
     </div>
     </div>
     <div class="contents-img">
@@ -18,8 +18,14 @@
   </div>
 </template>
 <script>
+import moment from 'moment'
 export default {
-  props: ["contents"]
+  props: ["contents"],
+  filters: {
+        moment: function (date) {
+            return moment(date).format('YYYY/MM/DD HH:mm');
+        }
+    }
 };
 </script>
 <style>
@@ -41,7 +47,6 @@ export default {
   height: auto;
   margin-bottom: 30px;
 }
-
 .contents-text p {
   padding-bottom: 10px;
 }
