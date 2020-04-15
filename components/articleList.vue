@@ -43,14 +43,15 @@ export default {
   color: #282828;
 }
 .article-category {
-  height: 16px;
-  width: 35px;
+  width: 50px;
   text-align: center;
-  background-color: #20d8ba;
+  line-height: 1.4;
 }
 
 .article-category p {
   font-size: 0.8rem;
   color: #ffffff;
+  background-color: #20d8ba;
+  border-radius: 4px;
 }
 </style>

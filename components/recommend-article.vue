@@ -10,21 +10,21 @@
         </nuxt-link>
       </div>
 
-      <div class="article col-md-6 col-xs-10">
-        <div class="article-title">
+      <div class="recommend-article col-md-6 col-xs-10">
+        <div class="recommend-article-title">
           <nuxt-link :to="'/articles/' + recommend.id" tag="p">
             <p>{{recommend.title}}</p>
           </nuxt-link>
         </div>
-        <div class="article-info">
+        <div class="recommend-article-info">
           <div class="article-category">
             <p>{{recommend.category}}</p>
           </div>
-          <div class="article-date">
+          <div class="recommend-article-date">
             <p>{{recommend.createdAt}}</p>
           </div>
         </div>
-        <div class="article-text"  v-html="$md.render(recommend.contents)">
+        <div class="recommend-article-text"  v-html="$md.render(recommend.contents)">
           <p>{{recommend.contents}}</p>
         </div>
       </div>
@@ -34,9 +34,6 @@
 <script>
 export default {
   props: ["recommend"],
-  mounted(){
-    console.log(this.recommend.contents)
-  },
 };
 </script>
 <style>
@@ -60,33 +57,26 @@ export default {
 .recommend-img{
   filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.3));
 }
-.article {
+.recommend-article {
   text-align: left;
+  line-height: 1.4;
 }
-.article-title p{
+.recommend-article-title p{
   font-size: 1.3rem;
   color: #282828;
   text-decoration: none;
   cursor: pointer;
 }
-.article-info {
+.recommend-article-info {
   display: flex;
+  width: 250px;
 }
-.article-category {
-  text-align: center;
-  line-height: 1.3;
-}
-.article-category p {
-  color: #ffffff;
-  font-size: 0.8rem;
-  background-color: #20d8ba;
-  
-}
-.article-date p {
+
+.recommend-article-date p {
   font-size: 0.8rem;
   line-height: 1.3;
 }
-.article-text {
+.recommend-article-text {
   max-width: 400px;
   max-height: 160px;
   font-size: 0.8rem;
@@ -94,13 +84,19 @@ export default {
   color: #505050;
 }
 
-.article-text h1 {
+.recommend-article-text h1 {
   font-size: 0.8rem;
+  margin-bottom: 0.2rem;
 }
-.article-text h2 {
+.recommend-article-text h2 {
   font-size: 0.8rem;
+  margin-bottom: 0.2rem;
 }
-.article-text h3 {
+.recommend-article-text h3 {
+  font-size: 0.8rem;
+  margin-bottom: 0.2rem;
+}
+.recommend-article-text p {
   font-size: 0.8rem;
 }
 </style>
