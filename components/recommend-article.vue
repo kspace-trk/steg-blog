@@ -45,27 +45,44 @@ export default {
 <style>
 .recommend {
   text-align: center;
+  margin-bottom: 80px;
 }
 .recommend-text {
-  margin: auto;
+  margin: 0 auto;
   font-size: 1.5rem;
   color: #404040;
   font-weight: 700;
   border-bottom: solid 2px #707070;
 }
 .recommend-text-box {
-  padding: 100px 0 70px 0;
+  padding: 60px 0 50px 0;
 }
 .recommend-box {
   display: flex;
-  margin: 0 0 60px 0;
+  margin: 0 0 20px 0;
 }
 .recommend-img{
   filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.3));
 }
+@media screen and (max-width: 767px) {
+  .recommend-img {
+  margin-bottom: 18px;
+}
+}
 .recommend-article {
   text-align: left;
   line-height: 1.4;
+  max-width: 400px;
+  max-height: 230px;
+  overflow: hidden;
+}
+@media screen and (max-width: 991px) {
+  .recommend-article {
+  max-height: 160px;
+}
+}
+.recommend-article-title{
+  margin-bottom: 8px;
 }
 .recommend-article-title p{
   font-size: 1.3rem;
@@ -76,6 +93,8 @@ export default {
 .recommend-article-info {
   display: flex;
   width: 250px;
+  align-items: center;
+  margin-bottom: 8px;
 }
 .recommend-article-category {
   display: inline-block;
@@ -84,21 +103,21 @@ export default {
 }
 
 .recommend-article-category p {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: #ffffff;
   background-color: #20d8ba;
   border-radius: 4px;
   padding:0 10px;
 }
+.recommend-article-date{
+  margin-left: 10px;
+}
 .recommend-article-date p {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   line-height: 1.3;
 }
 .recommend-article-text {
-  max-width: 400px;
-  max-height: 160px;
   font-size: 0.8rem;
-  overflow: hidden;
   color: #505050;
 }
 
@@ -117,4 +136,5 @@ export default {
 .recommend-article-text p {
   font-size: 0.8rem;
 }
+
 </style>

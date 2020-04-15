@@ -3,11 +3,11 @@
     <div class="contents-title">
       <p>{{contents.title}}</p>
     </div>
-    <div class="article-info">
-    <div class="article-category">
+    <div class="contents-info">
+    <div class="contents-category">
       <p>{{contents.category}}</p>
     </div>
-    <div class="article-date">
+    <div class="contents-date">
       <p>{{contents.createdAt | moment}}</p>
     </div>
     </div>
@@ -42,6 +42,32 @@ export default {
   margin-bottom: 10px;
   padding-bottom: 5px;
 }
+.contents-info {
+  display: flex;
+  width: 250px;
+  align-items: center;
+  margin: 20px 0 20px 0;
+}
+.contents-category {
+  display: inline-block;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.contents-category p {
+  font-size: 0.8rem;
+  color: #ffffff;
+  background-color: #20d8ba;
+  border-radius: 4px;
+  padding:0 10px;
+}
+.contents-date{
+  margin-left: 20px;
+}
+.contents-date p {
+  font-size: 0.7rem;
+  line-height: 1.3;
+}
 .contents-img img {
   width: 100%;
   height: auto;
@@ -74,4 +100,5 @@ export default {
 .contents-text ol {
   margin-left: 1rem;
 }
+
 </style>
