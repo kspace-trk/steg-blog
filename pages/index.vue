@@ -8,6 +8,9 @@
     <recommend-article :recommend="elem" />
     </div>
     <b-container>
+      <div class="recommend-text-box row">
+      <p class="recommend-text col-xs-12">記事一覧</p>
+    </div>
       <b-row class="article-list">
         <b-col lg="4" md="6" sm="8" v-for="elem in item" :key="elem.id" class="article-list">
           <articleList :article="elem" />
@@ -64,7 +67,5 @@ export default {
   display: flex;
   align-items: center;
 }
-.article-list {
-  margin: 0 auto;
-}
+
 </style>

@@ -1,37 +1,46 @@
 <template>
-    <div class="headerWrapper">
-      <img src="~/assets/img/Steg-logo-white.png" alt="Steg Logo">
-      <div class="headerSubIcon">
-        <a href="https://github.com/project-steg" target="_blank"><img src="~/assets/img/GitHub-icon.png" alt="GitHub icon"></a>
-        <a href="https://twitter.com/Steg_official" target="_blank"><img src="~/assets/img/twitter-icon.png" alt="Twitter icon"></a>
-        <a href="https://team-steg.com/" target="_blank"><img src="~/assets/img/homepage-icon.png" alt="Homepage icon"></a>
-      </div>
+  <div class="header-wrapper">
+    <nuxt-link to="/" tag="div" class="steg-logo">
+      <img src="~/assets/img/Steg-logo-white.png" alt="Steg Logo" />
+    </nuxt-link>
+    <div class="header-sub-icon">
+      <a href="https://github.com/project-steg" target="_blank">
+        <img src="~/assets/img/GitHub-icon.png" alt="GitHub icon" />
+      </a>
+      <a href="https://twitter.com/Steg_official" target="_blank">
+        <img src="~/assets/img/twitter-icon.png" alt="Twitter icon" />
+      </a>
+      <a href="https://team-steg.com/" target="_blank">
+        <img src="~/assets/img/homepage-icon.png" alt="Homepage icon" />
+      </a>
     </div>
+  </div>
 </template>
 
 
 <style>
-.headerWrapper{
-    height: 65px;
-    width: 100%;
-    background-color: #404040;
-    z-index: 100;
-    display: flex;
-    align-items: center;
+.header-wrapper {
+  height: 70px;
+  width: 100%;
+  background-color: #404040;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 1;
 }
-
-.headerWrapper img{
-  position: relative;
-  height: 80%;
+.steg-logo {
   margin: auto auto auto 30px;
+  cursor: pointer;
+}
+.steg-logo img {
+  height: 55px;
+}
+.header-sub-icon {
+  margin-right: 40px;
 }
 
-.headerSubIcon{
-  margin-right: 10px;
-}
-
-.headerSubIcon img{
+.header-sub-icon img {
   height: 30px;
-  margin: auto 25px auto ;
-  }
+  margin-left: 50px;
+}
 </style>

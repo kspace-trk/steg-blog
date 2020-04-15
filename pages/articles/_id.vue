@@ -1,8 +1,12 @@
 <template>
-    <div class="contents">
-      <stegBlogHeader />
-      <contents :contents="item"/>
-    </div>
+  <div class="contents">
+    <stegBlogHeader />
+    <b-container>
+      <div class="articleContents">
+        <contents :contents="item" />
+      </div>
+    </b-container>
+  </div>
 </template>
 
 <script>
@@ -10,7 +14,7 @@ import axios from "axios";
 import stegBlogHeader from "@/components/stegBlogHeader.vue";
 import contents from "@/components/contents.vue";
 export default {
-    data() {
+  data() {
     return {
       item: []
     };
@@ -23,17 +27,29 @@ export default {
       }
     );
     return {
-      item: data,
+      item: data
     };
   },
-    components: {
+  components: {
     stegBlogHeader,
-    contents,
+    contents
   }
-}
+};
 </script>
 
 <style>
-
+.contents {
+  background-image: url("~@/assets/img/article-background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+.articleContents {
+  border-radius: 20px;
+  margin: 50px auto;
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  padding-top: 30px;
+}
 </style>
 

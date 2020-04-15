@@ -1,7 +1,7 @@
 <template>
   <div v-if="recommend.recommend" class="recommend container">
     <div class="recommend-text-box row">
-      <p class="recommend-text col-xs-12">おすすめ記事</p>
+      <p class="recommend-text col-xs-12">人気記事</p>
     </div>
     <div class="recommend-box row">
       <div class="recommend-img col-md-6 col-xs-10">
@@ -11,20 +11,20 @@
       </div>
 
       <div class="article col-md-6 col-xs-10">
-        <div class="articleTitle">
-          <nuxt-link :to="'/articles/' + recommend.id">
+        <div class="article-title">
+          <nuxt-link :to="'/articles/' + recommend.id" tag="p">
             <p>{{recommend.title}}</p>
           </nuxt-link>
         </div>
-        <div class="articleInfo">
-          <div class="articleCategory">
+        <div class="article-info">
+          <div class="article-category">
             <p>{{recommend.category}}</p>
           </div>
-          <div class="articleDate">
+          <div class="article-date">
             <p>{{recommend.createdAt}}</p>
           </div>
         </div>
-        <div class="articleText"  v-html="$md.render(recommend.contents)">
+        <div class="article-text"  v-html="$md.render(recommend.contents)">
           <p>{{recommend.contents}}</p>
         </div>
       </div>
@@ -47,6 +47,7 @@ export default {
   margin: auto;
   font-size: 1.5rem;
   color: #404040;
+  font-weight: 700;
   border-bottom: solid 2px #707070;
 }
 .recommend-text-box {
@@ -56,29 +57,36 @@ export default {
   display: flex;
   margin: 0 0 60px 0;
 }
-
+.recommend-img{
+  filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.3));
+}
 .article {
   text-align: left;
 }
-.articleTitle a{
+.article-title p{
   font-size: 1.3rem;
   color: #282828;
   text-decoration: none;
+  cursor: pointer;
 }
-.articleInfo {
+.article-info {
   display: flex;
 }
-.articleCategory {
-  background-color: #20d8ba;
+.article-category {
+  text-align: center;
+  line-height: 1.3;
 }
-.articleCategory p {
+.article-category p {
   color: #ffffff;
-  font-size: 1rem;
-}
-.articleDate p {
   font-size: 0.8rem;
+  background-color: #20d8ba;
+  
 }
-.articleText {
+.article-date p {
+  font-size: 0.8rem;
+  line-height: 1.3;
+}
+.article-text {
   max-width: 400px;
   max-height: 160px;
   font-size: 0.8rem;
@@ -86,13 +94,13 @@ export default {
   color: #505050;
 }
 
-.articleText h1 {
+.article-text h1 {
   font-size: 0.8rem;
 }
-.articleText h2 {
+.article-text h2 {
   font-size: 0.8rem;
 }
-.articleText h3 {
+.article-text h3 {
   font-size: 0.8rem;
 }
 </style>
