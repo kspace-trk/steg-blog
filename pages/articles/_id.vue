@@ -6,12 +6,14 @@
         <contents :contents="item" />
       </div>
     </b-container>
+    <stegBlogFooter />
   </div>
 </template>
 
 <script>
 import axios from "axios";
 import stegBlogHeader from "@/components/stegBlogHeader.vue";
+import stegBlogFooter from "@/components/stegBlogFooter.vue";
 import contents from "@/components/contents.vue";
 export default {
   data() {
@@ -32,7 +34,8 @@ export default {
   },
   components: {
     stegBlogHeader,
-    contents
+    contents,
+    stegBlogFooter
   }
 };
 </script>
@@ -49,7 +52,7 @@ export default {
   width: 90%;
   height: auto;
   background-color: #ffffff;
-  padding-top: 30px;
+  padding: 30px 0 50px 0;
 }
 </style>
 

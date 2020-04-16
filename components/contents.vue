@@ -4,12 +4,12 @@
       <p>{{contents.title}}</p>
     </div>
     <div class="contents-info">
-    <div class="contents-category">
-      <p>{{contents.category}}</p>
-    </div>
-    <div class="contents-date">
-      <p>{{contents.createdAt | moment}}</p>
-    </div>
+      <div class="contents-category">
+        <p>{{contents.category}}</p>
+      </div>
+      <div class="contents-date">
+        <p>{{contents.createdAt | moment}}</p>
+      </div>
     </div>
     <div class="contents-img">
       <img :src="contents.image.url" alt="記事画像" />
@@ -18,14 +18,14 @@
   </div>
 </template>
 <script>
-import moment from 'moment'
+import moment from "moment";
 export default {
   props: ["contents"],
   filters: {
-        moment: function (date) {
-            return moment(date).format('YYYY/MM/DD HH:mm');
-        }
+    moment: function(date) {
+      return moment(date).format("YYYY/MM/DD HH:mm");
     }
+  }
 };
 </script>
 <style>
@@ -59,9 +59,9 @@ export default {
   color: #ffffff;
   background-color: #20d8ba;
   border-radius: 4px;
-  padding:0 10px;
+  padding: 0 10px;
 }
-.contents-date{
+.contents-date {
   margin-left: 20px;
 }
 .contents-date p {
@@ -100,5 +100,4 @@ export default {
 .contents-text ol {
   margin-left: 1rem;
 }
-
 </style>
