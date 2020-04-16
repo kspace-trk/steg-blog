@@ -34,6 +34,9 @@ export default {
   width: 75%;
   margin: 50px auto 80px;
 }
+.contents-title {
+  line-height: 1.6;
+}
 .contents-title p {
   font-size: 2rem;
   color: #282828;
@@ -95,9 +98,32 @@ export default {
   border-left: solid 5px #20d8ba;
 }
 .contents-text h3 {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
 }
 .contents-text ol {
   margin-left: 1rem;
+}
+/*-------493px以下のフォントサイズ調整--------*/
+@media screen and (max-width: 493px) {
+  .contents-title {
+    line-height: 1.4;
+  }
+  .contents-text h1 {
+  font-size: 1.4rem;
+  border-bottom: solid 2px #e0e0e0;
+  margin: 10px 0 1.5rem 0;
+  padding: 0 0 8px 13px;
+  border-left: solid 5px #20d8ba;
+  }
+.contents-text h2 {
+  font-size: 1.25rem;
+  border-bottom: solid 2px #e0e0e0;
+  margin: 1.5rem 0 1.5rem 0;
+  padding: 0 0 8px 13px;
+  border-left: solid 5px #20d8ba;
+  }
+.contents-text h3 {
+  font-size: 1.2rem;
+  }
 }
 </style>

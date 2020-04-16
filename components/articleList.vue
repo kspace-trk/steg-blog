@@ -47,6 +47,7 @@ export default {
 .article-contents-title {
   margin-top: 10px;
   padding-left: 15px;
+    line-height: 1.4;
 }
 .article-contents-title p {
   text-decoration: none;

@@ -1,8 +1,5 @@
 <template>
   <div v-if="recommend.recommend" class="recommend container">
-    <div class="recommend-text-box row">
-      <p class="recommend-text col-xs-12">人気記事</p>
-    </div>
     <div class="recommend-box row">
       <div class="recommend-img col-md-6 col-xs-10">
         <nuxt-link :to="'/articles/' + recommend.id">
@@ -46,16 +43,6 @@ export default {
 .recommend {
   text-align: center;
   margin-bottom: 80px;
-}
-.recommend-text {
-  margin: 0 auto;
-  font-size: 1.5rem;
-  color: #404040;
-  font-weight: 700;
-  border-bottom: solid 2px #707070;
-}
-.recommend-text-box {
-  padding: 60px 0 50px 0;
 }
 .recommend-box {
   display: flex;

@@ -16,5 +16,6 @@
 }
 .footer-wrapper p {
   color: #f7f7f7;
+  font-size: 0.8rem;
 }
 </style>
