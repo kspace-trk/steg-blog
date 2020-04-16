@@ -36,7 +36,7 @@ export default {
     moment: function(date) {
       return moment(date).format("YYYY/MM/DD HH:mm");
     }
-  }
+  },
 };
 </script>
 <style>
@@ -105,6 +105,10 @@ export default {
 }
 .recommend-article-text {
   font-size: 0.8rem;
+  color: #505050;
+}
+.recommend-article-text a {
+  text-decoration: none;
   color: #505050;
 }
 

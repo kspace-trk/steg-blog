@@ -14,7 +14,7 @@
     <div class="contents-img">
       <img :src="contents.image.url" alt="記事画像" />
     </div>
-    <div class="contents-text" v-html="$md.render(contents.contents)"></div>
+    <div class="contents-text" v-html="$md.render(contents.contents)" target="_blank"></div>
   </div>
 </template>
 <script>
