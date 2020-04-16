@@ -4,50 +4,52 @@
     <div class="mainVisual">
       <img src="~assets/img/steg-circle-icon.png" alt="circle icon" />
     </div>
+    <div class="index-recommend">
+    <div class="index-recommend-title">
+        <p>おすすめ記事</p>
+      </div>
     <div v-for="elem in item" :key="elem.id">
-    <recommend-article :recommend="elem" />
+      <recommend-article :recommend="elem" />
+    </div>
     </div>
     <b-container>
       <div class="index-article-list-title">
-      <p>記事一覧</p>
-    </div>
+        <p>記事一覧</p>
+      </div>
       <b-row class="article-list">
         <b-col lg="4" md="6" sm="12" xs="12" v-for="elem in item" :key="elem.id" class="article-list">
           <articleList :article="elem" />
         </b-col>
       </b-row>
     </b-container>
+    <stegBlogFooter />
   </div>
 </template>
 
 <script>
 import axios from "axios";
 import stegBlogHeader from "@/components/stegBlogHeader.vue";
+import stegBlogFooter from "@/components/stegBlogFooter.vue";
 import RecommendArticle from "@/components/recommend-article.vue";
 import articleList from "@/components/articleList.vue";
 
 export default {
-  data() {
-    return {
-      item: []
-    };
-  },
   async asyncData() {
     const { data } = await axios.get(
-      "https://steg-blog.microcms.io/api/v1/article",
+      "https://steg-blog.microcms.io/api/v1/article?limit=99",
       {
         headers: { "X-API-KEY": "86df9a31-91d6-4f0a-a022-1bd1ee558330" }
       }
     );
     return {
-      item: data.contents
+      item: data.contents,
     };
   },
-
   components: {
     stegBlogHeader,
     RecommendArticle,
-    articleList
+    articleList,
+    stegBlogFooter
   }
 };
 </script>
@@ -66,13 +68,26 @@ export default {
   display: flex;
   align-items: center;
 }
-.index-article-list-title{
-  width: 96px;
+.index-recommend {
+  margin-top: 50px;
+}
+.index-recommend-title {
+  width: 150px;
   margin: 0 auto;
   border-bottom: solid 2px #707070;
   margin-bottom: 40px;
 }
-.index-article-list-title p{
+.index-recommend-title p {
+  font-size: 1.5rem;
+  color: #404040;
+  font-weight: 700;
+}
+.index-article-list-title {
+  width: 96px;
+  margin: 0 auto 40px;
+  border-bottom: solid 2px #707070;
+}
+.index-article-list-title p {
   font-size: 1.5rem;
   color: #404040;
   font-weight: 700;

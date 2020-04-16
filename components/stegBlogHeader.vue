@@ -43,4 +43,26 @@
   height: 30px;
   margin-left: 50px;
 }
+/*----------424px以下------------*/
+@media screen and (max-width: 424px) {
+  .header-sub-icon {
+  margin-right: 15px;
+  }
+
+.header-sub-icon img {
+  height: 25px;
+  margin-left: 30px;
+  }
+}
+/*----------324px以下------------*/
+@media screen and (max-width: 324px) {
+  .header-sub-icon {
+  margin-right: 15px;
+  }
+
+.header-sub-icon img {
+  height: 25px;
+  margin-left: 20px;
+  }
+}
 </style>

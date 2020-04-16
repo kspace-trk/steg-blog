@@ -4,12 +4,12 @@
       <p>{{contents.title}}</p>
     </div>
     <div class="contents-info">
-    <div class="contents-category">
-      <p>{{contents.category}}</p>
-    </div>
-    <div class="contents-date">
-      <p>{{contents.createdAt | moment}}</p>
-    </div>
+      <div class="contents-category">
+        <p>{{contents.category}}</p>
+      </div>
+      <div class="contents-date">
+        <p>{{contents.createdAt | moment}}</p>
+      </div>
     </div>
     <div class="contents-img">
       <img :src="contents.image.url" alt="記事画像" />
@@ -18,14 +18,14 @@
   </div>
 </template>
 <script>
-import moment from 'moment'
+import moment from "moment";
 export default {
   props: ["contents"],
   filters: {
-        moment: function (date) {
-            return moment(date).format('YYYY/MM/DD HH:mm');
-        }
+    moment: function(date) {
+      return moment(date).format("YYYY/MM/DD HH:mm");
     }
+  }
 };
 </script>
 <style>
@@ -33,6 +33,9 @@ export default {
 .contents-wrapper {
   width: 75%;
   margin: 50px auto 80px;
+}
+.contents-title {
+  line-height: 1.6;
 }
 .contents-title p {
   font-size: 2rem;
@@ -59,9 +62,9 @@ export default {
   color: #ffffff;
   background-color: #20d8ba;
   border-radius: 4px;
-  padding:0 10px;
+  padding: 0 10px;
 }
-.contents-date{
+.contents-date {
   margin-left: 20px;
 }
 .contents-date p {
@@ -95,10 +98,32 @@ export default {
   border-left: solid 5px #20d8ba;
 }
 .contents-text h3 {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
 }
 .contents-text ol {
   margin-left: 1rem;
 }
-
+/*-------493px以下のフォントサイズ調整--------*/
+@media screen and (max-width: 493px) {
+  .contents-title {
+    line-height: 1.4;
+  }
+  .contents-text h1 {
+  font-size: 1.4rem;
+  border-bottom: solid 2px #e0e0e0;
+  margin: 10px 0 1.5rem 0;
+  padding: 0 0 8px 13px;
+  border-left: solid 5px #20d8ba;
+  }
+.contents-text h2 {
+  font-size: 1.25rem;
+  border-bottom: solid 2px #e0e0e0;
+  margin: 1.5rem 0 1.5rem 0;
+  padding: 0 0 8px 13px;
+  border-left: solid 5px #20d8ba;
+  }
+.contents-text h3 {
+  font-size: 1.2rem;
+  }
+}
 </style>

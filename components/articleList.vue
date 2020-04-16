@@ -16,14 +16,14 @@
 </template>
 
 <script>
-import moment from 'moment'
+import moment from "moment";
 export default {
   props: ["article"],
   filters: {
-        moment: function (date) {
-            return moment(date).format('YYYY/MM/DD HH:mm');
-        }
+    moment: function(date) {
+      return moment(date).format("YYYY/MM/DD HH:mm");
     }
+  }
 };
 </script>
 
@@ -47,6 +47,7 @@ export default {
 .article-contents-title {
   margin-top: 10px;
   padding-left: 15px;
+    line-height: 1.4;
 }
 .article-contents-title p {
   text-decoration: none;
@@ -61,7 +62,7 @@ export default {
 .article-date {
   margin-right: 10px;
 }
-.article-date p{
+.article-date p {
   font-size: 0.6rem;
 }
 .article-category {
