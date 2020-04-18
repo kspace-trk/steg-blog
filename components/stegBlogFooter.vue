@@ -7,7 +7,7 @@
 
 <style>
 .footer-wrapper {
-  height: 70px;
+  height: 200px;
   width: 100%;
   background-color: #404040;
   display: flex;
@@ -16,6 +16,15 @@
 }
 .footer-wrapper p {
   color: #f7f7f7;
-  font-size: 0.8rem;
+  font-size: 1rem;
+}
+@media screen and (max-width: 500px) {
+  .footer-wrapper {
+  height: 100px;
+  }
+  .footer-wrapper p {
+    color: #f7f7f7;
+    font-size: 0.8rem;
+  }
 }
 </style>

@@ -24,7 +24,11 @@
         <div class="recommend-article-text" v-html="$md.render(recommend.contents)">
           <p>{{recommend.contents}}</p>
         </div>
+        <div class="recommend-article-end">
+          <p>...</p>
+        </div>
       </div>
+      
     </div>
   </div>
 </template>
@@ -48,6 +52,10 @@ export default {
   display: flex;
   margin: 0 0 20px 0;
 }
+.recommend-article {
+  text-align: left;
+  line-height: 1.4;
+}
 .recommend-img {
   filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.3));
 }
@@ -56,16 +64,10 @@ export default {
     margin-bottom: 18px;
   }
 }
-.recommend-article {
-  text-align: left;
-  line-height: 1.4;
-  max-width: 400px;
-  max-height: 230px;
-  overflow: hidden;
-}
+
 @media screen and (max-width: 991px) {
   .recommend-article {
-    max-height: 160px;
+    max-height: 130px;
   }
 }
 .recommend-article-title {
@@ -105,26 +107,60 @@ export default {
 }
 .recommend-article-text {
   font-size: 0.8rem;
-  color: #505050;
+  max-height: 140px;
+  overflow: hidden;
+  }
+  @media screen and (max-width: 1199px) {
+  .recommend-article-text {
+  max-height: 140px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .recommend-article-text {
+  max-height: 70px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .recommend-article-text {
+  max-height: 70px;
+  }
 }
 .recommend-article-text a {
   text-decoration: none;
-  color: #505050;
+  color: #707070;
 }
 
 .recommend-article-text h1 {
   font-size: 0.8rem;
   margin-bottom: 0.2rem;
+  color: #707070;
 }
 .recommend-article-text h2 {
   font-size: 0.8rem;
   margin-bottom: 0.2rem;
+  color: #707070;
 }
 .recommend-article-text h3 {
   font-size: 0.8rem;
   margin-bottom: 0.2rem;
+  color: #707070;
 }
 .recommend-article-text p {
   font-size: 0.8rem;
+  color: #707070;
 }
+.recommend-article-text ol {
+  margin-left: 1rem;
+}
+.recommend-article-text ul {
+  margin-left: 1rem;
+}
+.recommend-article-text li {
+  font-size: 0.8rem;
+  color: #707070;
+}
+.recommend-article-end p{
+  font-size: 0.8rem;
+  color: #a0a0a0;
+  }
 </style>

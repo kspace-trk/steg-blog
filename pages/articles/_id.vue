@@ -1,11 +1,9 @@
 <template>
   <div class="contents">
     <stegBlogHeader />
-    <b-container>
-      <div class="articleContents">
+      <div class="contents-wrapper">
         <contents :contents="item" />
       </div>
-    </b-container>
     <stegBlogFooter />
   </div>
 </template>
@@ -46,13 +44,22 @@ export default {
   background-size: cover;
   background-attachment: fixed;
 }
-.articleContents {
+.contents-wrapper {
+  max-width: 1000px;
   border-radius: 20px;
   margin: 50px auto;
   width: 90%;
-  height: auto;
   background-color: #ffffff;
-  padding: 30px 0 50px 0;
+  padding: 5px 0 20px 0;
+}
+@media screen and (max-width: 767px) {
+  .contents-wrapper {
+  border-radius: 20px;
+  margin: 10px auto;
+  width: 95%;
+  background-color: #ffffff;
+  padding: 10px 10px 5px;
+}
 }
 </style>
 

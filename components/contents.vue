@@ -107,6 +107,10 @@ export default {
 @media screen and (max-width: 493px) {
   .contents-title {
     line-height: 1.4;
+    font-size: 1.4rem;
+  }
+  .contents-title p {
+    font-size: 1.6rem;
   }
   .contents-text h1 {
   font-size: 1.4rem;
