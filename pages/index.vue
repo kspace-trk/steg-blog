@@ -68,6 +68,11 @@ export default {
   display: flex;
   align-items: center;
 }
+@media screen and (max-width: 500px){
+  .mainVisual img{
+  width: 180px;
+}
+}
 .index-recommend {
   margin-top: 50px;
 }

@@ -45,6 +45,10 @@
 }
 /*----------424px以下------------*/
 @media screen and (max-width: 424px) {
+  .steg-logo {
+  margin: auto auto auto 12px;
+  cursor: pointer;
+}
   .header-sub-icon {
   margin-right: 15px;
   }
