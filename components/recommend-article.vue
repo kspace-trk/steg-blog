@@ -28,7 +28,6 @@
           <p>...</p>
         </div>
       </div>
-      
     </div>
   </div>
 </template>
@@ -40,7 +39,7 @@ export default {
     moment: function(date) {
       return moment(date).format("YYYY/MM/DD HH:mm");
     }
-  },
+  }
 };
 </script>
 <style>
@@ -109,20 +108,23 @@ export default {
   font-size: 0.8rem;
   max-height: 140px;
   overflow: hidden;
-  }
-  @media screen and (max-width: 1199px) {
+}
+/*----------1199px以下------------*/
+@media screen and (max-width: 1199px) {
   .recommend-article-text {
-  max-height: 140px;
+    max-height: 140px;
   }
 }
+/*----------991px以下------------*/
 @media screen and (max-width: 991px) {
   .recommend-article-text {
-  max-height: 70px;
+    max-height: 70px;
   }
 }
+/*----------767px以下------------*/
 @media screen and (max-width: 767px) {
   .recommend-article-text {
-  max-height: 70px;
+    max-height: 70px;
   }
 }
 .recommend-article-text a {
@@ -159,8 +161,8 @@ export default {
   font-size: 0.8rem;
   color: #707070;
 }
-.recommend-article-end p{
+.recommend-article-end p {
   font-size: 0.8rem;
   color: #a0a0a0;
-  }
+}
 </style>

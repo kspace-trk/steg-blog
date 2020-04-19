@@ -5,12 +5,12 @@
       <img src="~assets/img/steg-circle-icon.png" alt="circle icon" />
     </div>
     <div class="index-recommend">
-    <div class="index-recommend-title">
+      <div class="index-recommend-title">
         <p>おすすめ記事</p>
       </div>
-    <div v-for="elem in item" :key="elem.id">
-      <recommend-article :recommend="elem" />
-    </div>
+      <div v-for="elem in item" :key="elem.id">
+        <recommend-article :recommend="elem" />
+      </div>
     </div>
     <b-container>
       <div class="index-article-list-title">
@@ -42,7 +42,7 @@ export default {
       }
     );
     return {
-      item: data.contents,
+      item: data.contents
     };
   },
   components: {
@@ -68,10 +68,11 @@ export default {
   display: flex;
   align-items: center;
 }
-@media screen and (max-width: 500px){
-  .mainVisual img{
-  width: 180px;
-}
+/*----------500px以下------------*/
+@media screen and (max-width: 500px) {
+  .mainVisual img {
+    width: 180px;
+  }
 }
 .index-recommend {
   margin-top: 50px;

@@ -46,27 +46,27 @@
 /*----------424px以下------------*/
 @media screen and (max-width: 424px) {
   .steg-logo {
-  margin: auto auto auto 12px;
-  cursor: pointer;
-}
+    margin: auto auto auto 12px;
+    cursor: pointer;
+  }
   .header-sub-icon {
-  margin-right: 15px;
+    margin-right: 15px;
   }
 
-.header-sub-icon img {
-  height: 25px;
-  margin-left: 30px;
+  .header-sub-icon img {
+    height: 25px;
+    margin-left: 30px;
   }
 }
 /*----------324px以下------------*/
 @media screen and (max-width: 324px) {
   .header-sub-icon {
-  margin-right: 15px;
+    margin-right: 15px;
   }
 
-.header-sub-icon img {
-  height: 25px;
-  margin-left: 20px;
+  .header-sub-icon img {
+    height: 25px;
+    margin-left: 20px;
   }
 }
 </style>

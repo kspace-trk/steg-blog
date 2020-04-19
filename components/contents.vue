@@ -103,7 +103,7 @@ export default {
 .contents-text ol {
   margin-left: 1rem;
 }
-/*-------493px以下のフォントサイズ調整--------*/
+/*----------493px以下のフォントサイズ調整------------*/
 @media screen and (max-width: 493px) {
   .contents-title {
     line-height: 1.4;
@@ -113,21 +113,21 @@ export default {
     font-size: 1.6rem;
   }
   .contents-text h1 {
-  font-size: 1.4rem;
-  border-bottom: solid 2px #e0e0e0;
-  margin: 10px 0 1.5rem 0;
-  padding: 0 0 8px 13px;
-  border-left: solid 5px #20d8ba;
+    font-size: 1.4rem;
+    border-bottom: solid 2px #e0e0e0;
+    margin: 10px 0 1.5rem 0;
+    padding: 0 0 8px 13px;
+    border-left: solid 5px #20d8ba;
   }
-.contents-text h2 {
-  font-size: 1.25rem;
-  border-bottom: solid 2px #e0e0e0;
-  margin: 1.5rem 0 1.5rem 0;
-  padding: 0 0 8px 13px;
-  border-left: solid 5px #20d8ba;
+  .contents-text h2 {
+    font-size: 1.25rem;
+    border-bottom: solid 2px #e0e0e0;
+    margin: 1.5rem 0 1.5rem 0;
+    padding: 0 0 8px 13px;
+    border-left: solid 5px #20d8ba;
   }
-.contents-text h3 {
-  font-size: 1.2rem;
+  .contents-text h3 {
+    font-size: 1.2rem;
   }
 }
 </style>

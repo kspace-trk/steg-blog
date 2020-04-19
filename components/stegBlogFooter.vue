@@ -18,9 +18,10 @@
   color: #f7f7f7;
   font-size: 1rem;
 }
+/*----------500px以下------------*/
 @media screen and (max-width: 500px) {
   .footer-wrapper {
-  height: 100px;
+    height: 100px;
   }
   .footer-wrapper p {
     color: #f7f7f7;

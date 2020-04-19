@@ -1,9 +1,9 @@
 <template>
   <div class="contents">
     <stegBlogHeader />
-      <div class="contents-wrapper">
-        <contents :contents="item" />
-      </div>
+    <div class="contents-wrapper">
+      <contents :contents="item" />
+    </div>
     <stegBlogFooter />
   </div>
 </template>
@@ -52,14 +52,15 @@ export default {
   background-color: #ffffff;
   padding: 5px 0 20px 0;
 }
+/*----------767px以下------------*/
 @media screen and (max-width: 767px) {
   .contents-wrapper {
-  border-radius: 20px;
-  margin: 10px auto;
-  width: 95%;
-  background-color: #ffffff;
-  padding: 10px 10px 5px;
-}
+    border-radius: 20px;
+    margin: 10px auto;
+    width: 95%;
+    background-color: #ffffff;
+    padding: 10px 10px 5px;
+  }
 }
 </style>
 
