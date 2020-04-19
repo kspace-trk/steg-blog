@@ -55,8 +55,9 @@ export default {
   text-align: left;
   line-height: 1.4;
 }
-.recommend-img {
+.recommend-img img {
   filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.3));
+  border-radius: 8px;
 }
 @media screen and (max-width: 767px) {
   .recommend-img {

@@ -75,6 +75,7 @@ export default {
   width: 100%;
   height: auto;
   margin-bottom: 30px;
+  border-radius: 8px;
 }
 .contents-text p {
   padding-bottom: 10px;

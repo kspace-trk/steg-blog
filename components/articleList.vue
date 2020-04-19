@@ -38,6 +38,7 @@ export default {
   filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.3));
   cursor: pointer;
   margin: 0 auto 50px;
+  overflow: hidden;
 }
 .article-contents img {
   position: relative;
@@ -47,6 +48,7 @@ export default {
 .article-contents-title {
   margin-top: 10px;
   padding-left: 15px;
+  padding-right: 15px;
   line-height: 1.4;
 }
 .article-contents-title p {
