@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.9.5",
+    "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/markdownit": "^1.2.9",
     "@nuxtjs/moment": "^1.6.0",
     "bootstrap": "^4.4.1",

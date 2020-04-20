@@ -23,7 +23,9 @@ export default {
     const { data } = await axios.get(
       `https://steg-blog.microcms.io/api/v1/article/${params.id}`,
       {
-        headers: { "X-API-KEY": "86df9a31-91d6-4f0a-a022-1bd1ee558330" }
+        headers: {
+          "X-API-KEY": process.env.API_KEY
+        }
       }
     );
     return {

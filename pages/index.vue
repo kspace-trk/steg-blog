@@ -17,7 +17,15 @@
         <p>記事一覧</p>
       </div>
       <b-row class="article-list">
-        <b-col lg="4" md="6" sm="12" xs="12" v-for="elem in item" :key="elem.id" class="article-list">
+        <b-col
+          lg="4"
+          md="6"
+          sm="12"
+          xs="12"
+          v-for="elem in item"
+          :key="elem.id"
+          class="article-list"
+        >
           <articleList :article="elem" />
         </b-col>
       </b-row>
@@ -38,7 +46,9 @@ export default {
     const { data } = await axios.get(
       "https://steg-blog.microcms.io/api/v1/article?limit=99",
       {
-        headers: { "X-API-KEY": "86df9a31-91d6-4f0a-a022-1bd1ee558330" }
+        headers: {
+          "X-API-KEY": process.env.API_KEY
+        }
       }
     );
     return {
