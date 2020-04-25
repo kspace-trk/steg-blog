@@ -64,7 +64,7 @@ export default {
   },
   generate: {
     fallback: true,
-    routes() {
+    route() {
       const data = axios.get(
         "https://steg-blog.microcms.io/api/v1/article?limit=99",
         {
