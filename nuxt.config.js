@@ -1,5 +1,6 @@
 require("dotenv").config();
 const { API_KEY } = process.env;
+const axios = require("axios");
 export default {
   mode: "spa",
   /*
@@ -62,7 +63,20 @@ export default {
     typography: true // 言語に依存しないきれいな 置換 + 引用符 を有効にします。
   },
   generate: {
-    fallback: true
+    fallback: true,
+    routes() {
+      const data = axios.get(
+        "https://steg-blog.microcms.io/api/v1/article?limit=99",
+        {
+          headers: {
+            "X-API-KEY": process.env.API_KEY
+          }
+        }
+      );
+      return {
+        item: data.contents
+      };
+    }
   },
   env: {
     API_KEY
